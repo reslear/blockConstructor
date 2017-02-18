@@ -1,0 +1,60 @@
+
+    /* Стили документа */
+    *{padding:0;margin:0}
+    html{background:#F7F7F7;}
+    body{font: normal 13px/1.5  Open Sans, Tahoma;margin:0 auto;width:960px;background:#fff;min-height:100vh;padding: 50px 0; box-sizing: border-box;
+    overflow-y: scroll;}
+
+
+    /* Стили скрипта */
+    .block-manager {
+
+        position:relative;
+
+        & [bm_render]{
+            outline: none;
+            cursor: text;
+            width:100%;
+        }
+
+        & [bm-focus] {
+            background:#F8F8F8;
+            border-radius:1px;
+        }
+
+
+        /* Редактируемый Потомок */
+        & .bm-child {
+            cursor: text;
+            outline: none;
+            display: inline;
+        }
+
+    }
+
+    /* Пользовательские стили для скрипта */
+    .blog {
+
+        padding-left: 200px;
+        padding-right: 100px;
+        box-sizing: border-box;
+
+        & p, & pre, & h1, & h2 {margin-bottom: 20px;}
+        & code {background:#F8F8F8;padding:3px 7px;border-radius:3px;box-sizing: border-box}
+
+        & pre {
+
+            & code { width:100%;display:block;tab-size: 4;}
+        }
+
+        & .steps {counter-reset: step;}
+        & p.step:before {
+            content: "Шаг " counter(step) ": ";
+            font-size: 10px;
+            font-weight: bold;
+            counter-increment: step;
+        }
+
+    }
+
+
